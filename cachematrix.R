@@ -1,6 +1,6 @@
 ##makeCacheMatrix() and cacheSolve() work to calculate the inverse of a matrix 
 #and store it in a cache.
-#Call x <- makeCacheMatrix to initialise a matrix cache
+#Call x <- makeCacheMatrix() to initialise a matrix cache
 #Then call x$set(your-matrix-here) to load a matrix
 #Finally, cacheSolve(x) will take the matrix from x, calculate the inverse with 
 #solve(), cache it in x alongside the original matrix, and return the inverse. 
@@ -48,11 +48,11 @@ makeCacheMatrix <- function(originalMatrix = matrix()) {
 
 
 ## cacheSolve()
-# cacheSolve takes a list created with makeCacheMatrix which contains cached 
+#cacheSolve takes a list created with makeCacheMatrix which contains cached 
 #values, plus getter and setter functions
-# cacheSolve returns the inverse of the matrix contained in the list, either 
+#cacheSolve returns the inverse of the matrix contained in the list, either 
 #from the cache or by solve
-# the ... allows additional arguments to be passed to solve()
+#the ... allows additional arguments to be passed to solve()
 
 cacheSolve <- function(cacheList, ...) {
     #Check the cache
